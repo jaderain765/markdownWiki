@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="stylesheet" th:href="@{/bootstrap-5.2.3-dist/css/bootstrap.css}" />
+        <script th:src="@{/static/bootstrap-5.2.3-dist/js/bootstrap.js}"></script>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .wrapper {
+                background-color: #dff;
+            }
+            #docContent {
+                background-color: #fff;
+                padding: 10px;
+            }
+            blockquote > pre {
+                background-color: #ccc;
+                padding: 15px;
+                border-radius: 15px;
+            }
+        </style>
+        <title>Markdown</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <main role="main" class="container">
+                <div class="starter-template">
+                    <div id="docContent" th:utext="${contents}"></div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
